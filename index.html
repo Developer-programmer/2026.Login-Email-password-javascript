@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Wr9-P/styles.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <section class="brand-section">
+      <div class="brand-content">
+        <h1 class="brand-title">Welcome</h1>
+        <p class="brand-subtitle">Sign in or create an account to get started.</p>
+        <div class="brand-features">
+          <div class="feature">
+            <span class="feature-icon">◆</span>
+            <span>Secure and fast authentication</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">◆</span>
+            <span>Manage your account easily</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">◆</span>
+            <span>24/7 support available</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="form-container">
+        <div class="form-tabs">
+          <button type="button" class="tab-btn active" data-tab="login">Login</button>
+          <button type="button" class="tab-btn" data-tab="register">Register</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active">
+          <h2 class="form-title">Login to your account</h2>
+          <div class="input-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" name="email" placeholder="you@example.com" autocomplete="email">
+            <span id="loginEmailError" class="error-msg"></span>
+          </div>
+          <div class="input-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="password" placeholder="••••••••" autocomplete="current-password">
+            <span id="loginPasswordError" class="error-msg"></span>
+          </div>
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" name="remember">
+              <span class="checkmark"></span>
+              Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <form id="registerForm" class="auth-form">
+          <h2 class="form-title">Create an account</h2>
+          <div class="input-group input-row">
+            <div>
+              <label for="registerFirst">First name</label>
+              <input type="text" id="registerFirst" name="firstName" placeholder="••••••••" autocomplete="given-name">
+              <span id="registerFirstError" class="error-msg"></span>
+            </div>
+            <div>
+              <label for="registerLast">Last name</label>
+              <input type="text" id="registerLast" name="lastName" placeholder="Doe" autocomplete="family-name">
+              <span id="registerLastError" class="error-msg"></span>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" name="email" placeholder="you@example.com" autocomplete="email">
+            <span id="registerEmailError" class="error-msg"></span>
+          </div>
+          <div class="input-group">
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" name="password" placeholder="At least 8 characters" autocomplete="new-password">
+            <span id="registerPasswordError" class="error-msg"></span>
+          </div>
+          <div class="input-group">
+            <label for="registerConfirm">Confirm password</label>
+            <input type="password" id="registerConfirm" name="confirmPassword" placeholder="••••••••" autocomplete="new-password">
+            <span id="registerConfirmError" class="error-msg"></span>
+          </div>
+          <div class="input-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="registerTerms" name="terms" required>
+              <span class="checkmark"></span>
+              I agree to the <a href="#" class="inline-link">Terms of Service</a> and <a href="#" class="inline-link">Privacy Policy</a>
+            </label>
+          </div>
+          <button type="submit" class="submit-btn">Create account</button>
+        </form>
+
+        <div id="successMessage" class="success-message hidden">
+          <div class="success-icon">✓</div>
+          <h3>Success</h3>
+          <p id="successText"></p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="Wr9-P/script.js"></script>
+</body>
+</html>
+
